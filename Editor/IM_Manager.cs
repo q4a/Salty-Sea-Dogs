@@ -214,6 +214,12 @@ public class IM_Manager : EditorWindow
                             attributeValue = new int[attributeAmount];
                         }
 
+                        itemAttributeList = (ItemAttributeList)Resources.Load("AttributeDatabase");
+                        if (itemAttributeList == null)
+                            itemAttributeList = CreateAttributeDatabase.createItemAttributeDatabase();
+                        else
+                            itemAttributeList = (ItemAttributeList)Resources.Load("AttributeDatabase");
+
                         string[] attributes = new string[itemAttributeList.itemAttributeList.Count];
                         for (int i = 1; i < attributes.Length; i++)
                         {
@@ -247,7 +253,10 @@ public class IM_Manager : EditorWindow
 
 
                 }
-                catch { }
+                catch (System.Exception ex)
+                {
+                    Debug.Log(ex.ToString());
+                }
                 GUILayout.EndVertical();
             }
 
