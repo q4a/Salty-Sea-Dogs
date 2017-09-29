@@ -125,9 +125,7 @@ MonoBehaviour:
       attributeValue: 10
   - itemName: Golden Bow
     itemID: 6
-    itemDesc: 'This bow is legendary and has a low drop rate.
-
-      + 40 Damage'
+    itemDesc: ' '
     itemIcon: {fileID: 21300000, guid: ea8c1dc6581654b4a9e7d6257135fbe9, type: 3}
     itemModel: {fileID: 100000, guid: 40da790cc27843b45b9c255c8d996b43, type: 2}
     itemValue: 1
@@ -560,6 +558,18 @@ MonoBehaviour:
     itemType: 16
     itemWeight: 0
     maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Gold Pieces
+    itemID: 36
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: 8ef8e5012bb098f49b9d1ca109cceaaa, type: 3}
+    itemModel: {fileID: 178120, guid: b620df130404a9944af5b799b9b4750b, type: 2}
+    itemValue: 1
+    itemType: 19
+    itemWeight: 0
+    maxStack: 999
     indexItemInList: 999
     rarity: 0
     itemAttributes: []

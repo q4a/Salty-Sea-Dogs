@@ -1,44 +1,48 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RandomLootSystem : MonoBehaviour
+namespace InventoryMaster
 {
 
-    public int amountOfLoot = 10;
-    static ItemDataBaseList inventoryItemList;
-
-    int counter = 0;
-
-    // Use this for initialization
-    void Start()
+    public class RandomLootSystem : MonoBehaviour
     {
 
-        inventoryItemList = (ItemDataBaseList)Resources.Load("ItemDatabase");
+        public int amountOfLoot = 10;
+        static ItemDataBaseList inventoryItemList;
 
-        while (counter < amountOfLoot)
+        int counter = 0;
+
+        // Use this for initialization
+        void Start()
         {
-            counter++;
 
-            int randomNumber = Random.Range(1, inventoryItemList.itemList.Count - 1);
+            inventoryItemList = (ItemDataBaseList)Resources.Load("ItemDatabase");
 
-            Terrain terrain = Terrain.activeTerrain;
-
-            float x = Random.Range(5, terrain.terrainData.size.x - 5);
-            float z = Random.Range(5, terrain.terrainData.size.z - 5);
-
-
-            if (inventoryItemList.itemList[randomNumber].itemModel == null)
-                counter--;
-            else
+            while (counter < amountOfLoot)
             {
-                GameObject randomLootItem = (GameObject)Instantiate(inventoryItemList.itemList[randomNumber].itemModel);
-                PickUpItem item = randomLootItem.AddComponent<PickUpItem>();
-                item.item = inventoryItemList.itemList[randomNumber];
+                counter++;
 
-                randomLootItem.transform.localPosition = new Vector3(x, 0, z);
+                int randomNumber = Random.Range(1, inventoryItemList.itemList.Count - 1);
+
+                Terrain terrain = Terrain.activeTerrain;
+
+                float x = Random.Range(5, terrain.terrainData.size.x - 5);
+                float z = Random.Range(5, terrain.terrainData.size.z - 5);
+
+
+                if (inventoryItemList.itemList[randomNumber].itemModel == null)
+                    counter--;
+                else
+                {
+                    GameObject randomLootItem = (GameObject)Instantiate(inventoryItemList.itemList[randomNumber].itemModel);
+                    PickUpItem item = randomLootItem.AddComponent<PickUpItem>();
+                    item.item = inventoryItemList.itemList[randomNumber];
+
+                    randomLootItem.transform.localPosition = new Vector3(x, 0, z);
+                }
             }
+
         }
 
     }
-
 }

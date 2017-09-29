@@ -29,6 +29,8 @@ MonoBehaviour:
       itemAttributes: []
     amountOfFinalItem: 0
     timeToCraft: 0
+    itemCategory:
+      categoryName: 
   - ingredients: 0e000000
     amount: 010000000000000000000000
     finalItem:
@@ -50,6 +52,8 @@ MonoBehaviour:
         attributeValue: 20
     amountOfFinalItem: 1
     timeToCraft: 0
+    itemCategory:
+      categoryName: FoodLow
   - ingredients: 0e00000010000000
     amount: 0100000001000000
     finalItem:
@@ -75,6 +79,8 @@ MonoBehaviour:
         attributeValue: 20
     amountOfFinalItem: 2
     timeToCraft: 0
+    itemCategory:
+      categoryName: FoodMed
   - ingredients: 0c0000000d000000
     amount: 0100000001000000
     finalItem:
@@ -96,3 +102,5 @@ MonoBehaviour:
         attributeValue: 50
     amountOfFinalItem: 2
     timeToCraft: 0
+    itemCategory:
+      categoryName: Juices

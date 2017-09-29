@@ -14,7 +14,7 @@ MonoBehaviour:
   UFPS: 1
   reloadWeapon: 114
   throwGrenade: 103
-  SplitItem: 305
+  SplitItem: 306
   InventoryKeyCode: 105
   StorageKeyCode: 101
   CharacterSystemKeyCode: 99

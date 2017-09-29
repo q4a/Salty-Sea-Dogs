@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
-[System.Serializable]
+namespace InventoryMaster
+{
+    [System.Serializable]
 public class Blueprint
 {
 
@@ -11,6 +12,8 @@ public class Blueprint
     public Item finalItem;
     public int amountOfFinalItem;
     public float timeToCraft;
+    public ItemCategory itemCategory;
+
 
     public Blueprint(List<int> ingredients, int amountOfFinalItem, List<int> amount, Item item)
     {
@@ -21,4 +24,5 @@ public class Blueprint
 
     public Blueprint() { }
 
+}
 }
